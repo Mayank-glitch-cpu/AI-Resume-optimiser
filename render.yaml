@@ -2,7 +2,7 @@ services:
   - type: web
     name: resume-optimizer
     runtime: docker
-    plan: pro
+    plan: starter
     region: oregon
     dockerfilePath: ./Dockerfile
     envVars:
