@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: resume-optimizer
+    runtime: docker
+    plan: pro
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: PORT
+        value: "8000"
+    healthCheckPath: /api/health
+    autoDeploy: true

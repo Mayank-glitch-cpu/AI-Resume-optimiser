@@ -1,0 +1,32 @@
+# Dependencies (rebuilt in container)
+frontend/node_modules
+frontend/.next
+backend/venv
+backend/__pycache__
+backend/services/__pycache__
+backend/prompts/__pycache__
+
+# Environment files (secrets set via Render dashboard)
+backend/.env
+.env
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Docs
+README.md
+*.md
+
+# Test files
+test_latex.json

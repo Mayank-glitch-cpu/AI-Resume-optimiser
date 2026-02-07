@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mountain-shadow: #101357;
+  --old-makeup: #fea49f;
+  --goldenrod: #fbaf08;
+  --bluebell: #00a0a0;
+  --bold-green: #007f4f;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--mountain-shadow);
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bluebell);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--old-makeup);
+}
+
+/* Textarea styling */
+textarea {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Button animations */
+.btn-primary {
+  @apply bg-goldenrod text-mountain-shadow font-semibold py-3 px-6 rounded-lg;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-lg hover:scale-105;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+}
+
+.btn-secondary {
+  @apply bg-bluebell text-white font-semibold py-2 px-4 rounded-lg;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-lg hover:brightness-110;
+}
+
+/* Card styling */
+.card {
+  @apply bg-white/5 backdrop-blur-sm rounded-xl border border-white/10;
+  @apply transition-all duration-300;
+}
+
+.card:hover {
+  @apply border-bluebell/50;
+}
+
+/* Input styling */
+.input-field {
+  @apply w-full bg-white/5 border border-white/20 rounded-lg p-4;
+  @apply text-white placeholder-white/50;
+  @apply focus:outline-none focus:border-bluebell focus:ring-1 focus:ring-bluebell;
+  @apply transition-all duration-200;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply inline-block w-6 h-6 border-2 border-white/20 border-t-goldenrod rounded-full;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Pulse animation for success */
+@keyframes pulse-success {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 127, 79, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(0, 127, 79, 0);
+  }
+}
+
+.pulse-success {
+  animation: pulse-success 2s ease-in-out;
+}

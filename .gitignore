@@ -1,0 +1,28 @@
+# Backend
+backend/.env
+backend/venv/
+backend/__pycache__/
+backend/services/__pycache__/
+backend/prompts/__pycache__/
+*.pyc
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env*.local
+next-env.d.ts
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test
+test_latex.json
